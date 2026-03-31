@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>Deutsche Touristen in Tromsø festgenommen | tagesschau.de</title>
+  <meta name="description"
+    content="Zwei deutsche Urlauber wurden in der norwegischen Stadt Tromsø nach einem Banküberfall von der Polizei festgenommen." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@400;600;700&display=swap"
+    rel="stylesheet">
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --ts-red: #005696;
+      --ts-dark-red: #005696;
+      --ts-text: #1a1a1a;
+      --ts-muted: #666666;
+      --ts-border: #e0e0e0;
+      --ts-bg: #f5f5f0;
+      --ts-white: #ffffff;
+    }
+
+    body {
+      font-family: 'Source Sans 3', Helvetica, Arial, sans-serif;
+      background: var(--ts-bg);
+      color: var(--ts-text);
+      font-size: 16px;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── HEADER ── */
+    .ts-header {
+      background: var(--ts-red);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    }
+
+    .ts-header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 14px;
+      height: 52px;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .ts-logo {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      text-decoration: none;
+    }
+
+    .ts-logo-text {
+      font-family: 'Source Sans 3', Arial, sans-serif;
+      font-weight: 700;
+      font-size: 22px;
+      color: white;
+      letter-spacing: -0.5px;
+    }
+
+    .ts-logo-24 {
+      background: white;
+      color: var(--ts-red);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 4px;
+      border-radius: 2px;
+      margin-left: 4px;
+      line-height: 1;
+    }
+
+    .ts-menu-icon {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .ts-menu-icon span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: white;
+      border-radius: 2px;
+    }
+
+    /* ── BREAKING TICKER ── */
+    .ts-ticker {
+      background: #1a1a1a;
+      color: white;
+      font-size: 13px;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .ts-ticker-inner {
+      display: flex;
+      align-items: center;
+    }
+
+    .ts-ticker-label {
+      background: var(--ts-red);
+      color: white;
+      font-weight: 700;
+      font-size: 11px;
+      padding: 7px 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      flex-shrink: 0;
+    }
+
+    .ts-ticker-text {
+      display: inline-block;
+      padding: 7px 16px;
+      animation: ticker 20s linear infinite;
+    }
+
+    @keyframes ticker {
+      0% {
+        transform: translateX(100vw);
+      }
+
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    /* ── NAV TABS ── */
+    .ts-nav {
+      background: white;
+      border-bottom: 3px solid var(--ts-red);
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+
+    .ts-nav::-webkit-scrollbar {
+      display: none;
+    }
+
+    .ts-nav-inner {
+      display: flex;
+      gap: 0;
+      min-width: max-content;
+      padding: 0 14px;
+    }
+
+    .ts-nav-link {
+      display: block;
+      padding: 11px 14px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--ts-muted);
+      text-decoration: none;
+      white-space: nowrap;
+      border-bottom: 3px solid transparent;
+      margin-bottom: -3px;
+    }
+
+    .ts-nav-link.active {
+      color: var(--ts-red);
+      border-bottom-color: var(--ts-red);
+    }
+
+    /* ── BREADCRUMB ── */
+    .ts-breadcrumb {
+      padding: 10px 14px 6px;
+      font-size: 12px;
+      color: var(--ts-muted);
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .ts-breadcrumb a {
+      color: var(--ts-red);
+      text-decoration: none;
+    }
+
+    .ts-breadcrumb span {
+      margin: 0 4px;
+    }
+
+    /* ── ARTICLE ── */
+    .ts-article {
+      background: white;
+      max-width: 680px;
+      margin: 0 auto 16px;
+      padding-bottom: 24px;
+    }
+
+    /* Tag/Ressort */
+    .ts-ressort {
+      display: inline-block;
+      color: var(--ts-red);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 14px 14px 6px;
+    }
+
+    /* Headline */
+    .ts-headline {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 26px;
+      font-weight: 700;
+      line-height: 1.25;
+      padding: 0 14px 10px;
+      color: var(--ts-text);
+    }
+
+    /* Lead */
+    .ts-lead {
+      font-size: 17px;
+      font-weight: 600;
+      line-height: 1.45;
+      padding: 0 14px 16px;
+      color: #2a2a2a;
+      border-bottom: 1px solid var(--ts-border);
+    }
+
+    /* Meta */
+    .ts-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--ts-border);
+      flex-wrap: wrap;
+    }
+
+    .ts-meta-date {
+      font-size: 13px;
+      color: var(--ts-muted);
+    }
+
+    .ts-meta-share {
+      margin-left: auto;
+      display: flex;
+      gap: 10px;
+    }
+
+    .ts-share-btn {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      background: var(--ts-bg);
+      border: 1px solid var(--ts-border);
+      border-radius: 4px;
+      padding: 5px 10px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--ts-text);
+      cursor: pointer;
+    }
+
+    /* Hero Image */
+    .ts-hero {
+      width: 100%;
+      position: relative;
+      background: #222;
+    }
+
+    .ts-hero img {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .ts-hero-caption {
+      background: rgba(0, 0, 0, 0.75);
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 11px;
+      padding: 6px 10px;
+      line-height: 1.4;
+    }
+
+    /* Fake image placeholder using CSS */
+    .ts-hero-fake {
+      width: 100%;
+      height: 210px;
+      background: linear-gradient(135deg, #1a3a5c 0%, #2b5c8a 40%, #1e4a70 70%, #0f2a40 100%);
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+      overflow: hidden;
+    }
+
+    .ts-hero-fake::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='210'%3E%3Crect width='400' height='210' fill='%23163350'/%3E%3Cellipse cx='200' cy='260' rx='200' ry='130' fill='%23102840'/%3E%3Crect x='100' y='90' width='60' height='80' rx='4' fill='%231a4570' opacity='0.8'/%3E%3Crect x='170' y='70' width='80' height='100' rx='4' fill='%231e5080' opacity='0.8'/%3E%3Crect x='260' y='100' width='50' height='70' rx='4' fill='%231a4570' opacity='0.7'/%3E%3Crect x='20' y='110' width='70' height='60' rx='4' fill='%23163858' opacity='0.7'/%3E%3Crect x='0' y='140' width='400' height='70' fill='%230c2030' opacity='0.5'/%3E%3C/svg%3E") center/cover;
+    }
+
+    .ts-hero-fake-label {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 30px 12px 10px;
+      background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 11px;
+    }
+
+    .ts-hero-fake-credit {
+      font-size: 10px;
+      opacity: 0.7;
+      margin-top: 2px;
+    }
+
+    /* Body text */
+    .ts-body {
+      padding: 16px 14px;
+    }
+
+    .ts-body p {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 17px;
+      line-height: 1.65;
+      color: #1a1a1a;
+      margin-bottom: 18px;
+    }
+
+    .ts-body p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Pull Quote */
+    .ts-pullquote {
+      border-left: 4px solid var(--ts-red);
+      margin: 22px 0;
+      padding: 12px 14px;
+      background: #faf8f5;
+    }
+
+    .ts-pullquote p {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 18px;
+      font-style: italic;
+      font-weight: 600;
+      color: #2a2a2a;
+      line-height: 1.45;
+      margin: 0;
+    }
+
+    .ts-pullquote cite {
+      display: block;
+      font-size: 13px;
+      font-style: normal;
+      color: var(--ts-muted);
+      margin-top: 8px;
+      font-family: 'Source Sans 3', sans-serif;
+    }
+
+    /* Info Box */
+    .ts-infobox {
+      background: #f0f4f8;
+      border-top: 3px solid var(--ts-red);
+      padding: 14px;
+      margin: 22px 0;
+    }
+
+    .ts-infobox-title {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--ts-red);
+      margin-bottom: 8px;
+    }
+
+    .ts-infobox p {
+      font-family: 'Source Sans 3', sans-serif !important;
+      font-size: 14px !important;
+      line-height: 1.5 !important;
+      margin-bottom: 8px !important;
+    }
+
+    .ts-infobox p:last-child {
+      margin-bottom: 0 !important;
+    }
+
+    /* Section divider */
+    .ts-divider {
+      border: none;
+      border-top: 1px solid var(--ts-border);
+      margin: 24px 0;
+    }
+
+    /* Related */
+    .ts-related {
+      background: white;
+      max-width: 680px;
+      margin: 0 auto 16px;
+      padding: 0;
+      border-top: 3px solid var(--ts-red);
+    }
+
+    .ts-related-title {
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 12px 14px 8px;
+      color: var(--ts-text);
+    }
+
+    .ts-related-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 10px 14px;
+      border-top: 1px solid var(--ts-border);
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .ts-related-img {
+      width: 72px;
+      height: 50px;
+      border-radius: 3px;
+      object-fit: cover;
+      background: #ddd;
+      flex-shrink: 0;
+    }
+
+    .ts-related-img-fake {
+      width: 72px;
+      height: 50px;
+      border-radius: 3px;
+      flex-shrink: 0;
+    }
+
+    .ts-related-text {
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.35;
+      color: var(--ts-text);
+    }
+
+    .ts-related-date {
+      font-size: 12px;
+      color: var(--ts-muted);
+      margin-top: 4px;
+      font-weight: 400;
+    }
+
+    /* Footer */
+    .ts-footer {
+      background: #1a1a1a;
+      color: rgba(255, 255, 255, 0.7);
+      text-align: center;
+      padding: 20px 14px;
+      font-size: 12px;
+      line-height: 1.8;
+    }
+
+    .ts-footer a {
+      color: rgba(255, 255, 255, 0.5);
+      text-decoration: none;
+      margin: 0 8px;
+    }
+
+    /* April reveal overlay */
+    .ts-april-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.92);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 24px;
+    }
+
+    .ts-april-overlay.visible {
+      display: flex;
+      animation: fadeIn 0.4s ease;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .ts-april-emoji {
+      font-size: 72px;
+      margin-bottom: 16px;
+    }
+
+    .ts-april-title {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 12px;
+    }
+
+    .ts-april-sub {
+      font-size: 17px;
+      color: rgba(255, 255, 255, 0.75);
+      margin-bottom: 32px;
+      line-height: 1.5;
+    }
+
+    .ts-april-btn {
+      background: var(--ts-red);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 14px 28px;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    /* Scroll-based reveal trigger */
+    .ts-april-trigger {
+      height: 1px;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="ts-header">
+    <div class="ts-header-inner">
+      <a class="ts-logo" href="#">
+        <span class="ts-logo-text">tagesschau</span>
+        <span class="ts-logo-24">24</span>
+      </a>
+      <div class="ts-menu-icon">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- TICKER -->
+  <div class="ts-ticker">
+    <div class="ts-ticker-inner">
+      <div class="ts-ticker-label">Eilmeldung</div>
+      <div class="ts-ticker-text">Deutsche Touristen in Norwegen verhaftet &nbsp;·&nbsp; Bundesregierung äußert sich zu
+        Vorfall in Tromsø &nbsp;·&nbsp; Auswärtiges Amt eingeschaltet &nbsp;·&nbsp; Mehr Details folgen</div>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <nav class="ts-nav">
+    <div class="ts-nav-inner">
+      <a class="ts-nav-link" href="#">Inland</a>
+      <a class="ts-nav-link active" href="#">Ausland</a>
+      <a class="ts-nav-link" href="#">Wirtschaft</a>
+      <a class="ts-nav-link" href="#">Wissen</a>
+      <a class="ts-nav-link" href="#">Panorama</a>
+      <a class="ts-nav-link" href="#">Sport</a>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <div class="ts-breadcrumb">
+    <a href="#">Startseite</a>
+    <span>›</span>
+    <a href="#">Ausland</a>
+    <span>›</span>
+    Norwegen
+  </div>
+
+  <!-- ARTICLE -->
+  <article class="ts-article">
+    <div class="ts-ressort">Norwegen · Eilmeldung</div>
+
+    <h1 class="ts-headline">Urlauber aus Deutschland in Tromsø nach Banküberfall festgenommen</h1>
+
+    <p class="ts-lead">
+      Zwei deutsche Touristen sind in der norwegischen Stadt Tromsø von der Polizei verhaftet worden. Die Behörden
+      werfen ihnen vor, an einem Banküberfall in der Innenstadt beteiligt gewesen zu sein. Das Auswärtige Amt wurde
+      informiert.
+    </p>
+
+    <div class="ts-meta">
+      <span class="ts-meta-date">01. April 2026, 07:47 Uhr · Aktualisiert: 08:12 Uhr</span>
+      <div class="ts-meta-share">
+        <button class="ts-share-btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="18" cy="5" r="3" />
+            <circle cx="6" cy="12" r="3" />
+            <circle cx="18" cy="19" r="3" />
+            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" />
+            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
+          </svg>
+          Teilen
+        </button>
+      </div>
+    </div>
+
+    <!-- Hero Image -->
+    <div class="ts-hero">
+      <!-- Hier trägst du den Namen deiner Bilddatei ein (z.B. foto.jpg) -->
+      <img src="norway_april.jpg" alt="Tromsø">
+      <div class="ts-hero-caption">
+        Blick auf Tromsø: Die norwegische Polizei sperrte nach dem Vorfall mehrere Straßen in der Innenstadt ab. | Foto:
+        dpa / Archiv
+      </div>
+    </div>
+
+    <div class="ts-body">
+      <p>
+        Tromsø – Zwei deutsche Staatsangehörige sind am gestrigen Abend in der nordnorwegischen Stadt Tromsø von der
+        Polizei festgenommen worden. Nach Angaben der Tromsø politistasjon sollen die beiden Urlauber im Verdacht
+        stehen, an einem Überfall auf eine Filiale der <em>SpareBank 1 Nord-Norge</em> in der Storgata, der
+        Haupteinkaufsstraße der Stadt, beteiligt gewesen zu sein.
+      </p>
+
+      <p>
+        Die Verhaftung erfolgte am gestrigen Abend gegen 22:40 Uhr Ortszeit, als die Verdächtigen in einem Café unweit
+        des Tatorts von
+        Zivilbeamten gestellt wurden. Laut der norwegischen Nachrichtenagentur NTB versuchten die beiden zunächst zu
+        flüchten, konnten jedoch nach einer kurzen Verfolgung auf dem Stortorget, dem zentralen Platz der Stadt,
+        gestoppt werden.
+      </p>
+
+      <div class="ts-pullquote">
+        <p>„Die beiden Verdächtigen verhielten sich kooperativ und wurden widerstandslos festgenommen. Ermittlungen zur
+          genauen Schadenshöhe laufen."</p>
+        <cite>— Polizeisprecher Lars Eriksen, Tromsø politistasjon</cite>
+      </div>
+
+      <p>
+        Die Beute soll nach ersten Erkenntnissen mehrere Tausend Kronen betragen. Augenzeugen berichteten, die Täter
+        hätten die Bank kurz vor Schließung betreten und dabei das Personal bedroht. Niemand wurde dabei körperlich
+        verletzt. Die Polizei prüft derzeit, ob die Deutschen in weitere Vorfälle in der Region verwickelt sein könnten.
+      </p>
+
+      <div class="ts-infobox">
+        <div class="ts-infobox-title">Hintergrund: Deutsche in Norwegen</div>
+        <p>Norwegen zählt jährlich mehrere Hunderttausend deutsche Touristen, besonders in der Hochsaison sowie rund um
+          die Mitternachtssonne im Norden. Tromsø gilt als eine der beliebtesten Städte für Nordlichter-Tourismus.
+          Kriminalität durch ausländische Touristen ist nach Angaben der norwegischen Polizei statistisch selten.</p>
+      </div>
+
+      <p>
+        Das Auswärtige Amt in Berlin bestätigte auf Anfrage, über den Fall informiert worden zu sein, und erklärte, die
+        zuständige deutsche Botschaft in Oslo stehe in Kontakt mit den norwegischen Behörden. Den Festgenommenen steht
+        konsularischer Beistand zu.
+      </p>
+
+      <p>
+        Die Verdächtigen sollen noch heute einem Ermittlungsrichter vorgeführt werden. Bei einem Schuldspruch droht
+        ihnen nach norwegischem Recht eine Freiheitsstrafe von bis zu sechs Jahren. Zu weiteren Details zu den
+        Personalien der Festgenommenen äußerte sich die Polizei bislang nicht.
+      </p>
+
+      <hr class="ts-divider">
+
+      <p style="font-size:14px; font-family:'Source Sans 3',sans-serif; color:#666;">
+        <strong>Dieser Artikel wird fortlaufend aktualisiert.</strong> Stand: 01. April 2026, 08:12 Uhr. Mitarbeit:
+        Florian Scherzkeks Alzinger.
+      </p>
+    </div>
+
+    <!-- April Trigger (nach Scroll) -->
+    <div class="ts-april-trigger" id="aprilTrigger"></div>
+  </article>
+
+  <!-- RELATED -->
+  <section class="ts-related">
+    <div class="ts-related-title">Mehr zum Thema</div>
+
+    <a class="ts-related-item" href="#">
+      <svg class="ts-related-img-fake" viewBox="0 0 72 50" xmlns="http://www.w3.org/2000/svg">
+        <rect width="72" height="50" fill="#1a3a5c" />
+        <rect x="10" y="20" width="15" height="20" fill="#1e4a70" />
+        <rect x="30" y="15" width="20" height="25" fill="#2b5c8a" />
+        <rect x="55" y="22" width="12" height="18" fill="#1a3a5c" />
+      </svg>
+      <div>
+        <div class="ts-related-text">1.April: Warum Brüder so sind wie sie sind?</div>
+        <div class="ts-related-date">Ausland · 22. März 2026</div>
+      </div>
+    </a>
+
+    <a class="ts-related-item" href="#">
+      <svg class="ts-related-img-fake" viewBox="0 0 72 50" xmlns="http://www.w3.org/2000/svg">
+        <rect width="72" height="50" fill="#2a4a1a" />
+        <ellipse cx="36" cy="15" rx="30" ry="20" fill="#1a3a0a" opacity="0.6" />
+        <rect x="0" y="35" width="72" height="15" fill="#1a3a0a" />
+      </svg>
+      <div>
+        <div class="ts-related-text">Hot for no reason: Warum Florians generell gut aussehen</div>
+        <div class="ts-related-date">Ausland · 18. Februar 2026</div>
+      </div>
+    </a>
+
+    <a class="ts-related-item" href="#">
+      <svg class="ts-related-img-fake" viewBox="0 0 72 50" xmlns="http://www.w3.org/2000/svg">
+        <rect width="72" height="50" fill="#3a1a1a" />
+        <rect x="5" y="10" width="62" height="30" rx="2" fill="#5a2020" opacity="0.7" />
+        <circle cx="36" cy="25" r="10" fill="#cc0000" opacity="0.5" />
+      </svg>
+      <div>
+        <div class="ts-related-text">Auswärtiges Amt: Urlaub in Oberammergau nicht empfohlen!</div>
+        <div class="ts-related-date">Inland · 05. April 2026</div>
+      </div>
+    </a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="ts-footer">
+    <p style="margin-bottom:8px">
+      <a href="#">Impressum</a>
+      <a href="#">Datenschutz</a>
+      <a href="#">Kontakt</a>
+      <a href="#">ARD</a>
+    </p>
+    <p>© 2026 tagesschau.de · Ein Angebot der ARD-aktuell</p>
+  </footer>
+
+  <!-- APRIL OVERLAY -->
+  <div class="ts-april-overlay" id="aprilOverlay">
+    <div class="ts-april-emoji">😂</div>
+    <div class="ts-april-title">April, April!</div>
+    <div class="ts-april-sub">
+      Mama und Papa sitzen natürlich nicht in Tromsø hinter Gittern.<br>
+      Aber du hast es kurz geglaubt, oder? 😄<br><br>
+    </div>
+    <button class="ts-april-btn" onclick="document.getElementById('aprilOverlay').classList.remove('visible')">
+      Schön, dass du meine Schwester bist 💛
+    </button>
+  </div>
+
+  <script>
+    // Show April overlay after reading partway through the article
+    let revealed = false;
+
+    function maybeReveal() {
+      if (revealed) return;
+      const trigger = document.getElementById('aprilTrigger');
+      const rect = trigger.getBoundingClientRect();
+      if (rect.top < window.innerHeight + 100) {
+        revealed = true;
+        // Small delay for dramatic effect
+        setTimeout(() => {
+          document.getElementById('aprilOverlay').classList.add('visible');
+        }, 15000);
+      }
+    }
+
+    // Also reveal after 25 seconds as fallback (they might not scroll all the way)
+    setTimeout(() => {
+      if (!revealed) {
+        revealed = true;
+        document.getElementById('aprilOverlay').classList.add('visible');
+      }
+    }, 25000);
+
+    window.addEventListener('scroll', maybeReveal, { passive: true });
+  </script>
+
+</body>
+
+</html>
